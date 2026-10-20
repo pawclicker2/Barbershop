@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barbershop Zagreb | Haircuts and Beard Trims</title>
+<meta name="description" content="Barbershop in Zagreb: classic haircuts, fades, beard trims and hot towel shaves. Book your chair.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f6f3ee;--ink:#15181d;--muted:#5d646d;--red:#c8242b;--blue:#1d3f7a;--line:#d9d3c8;--card:#fffdf9}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 'Work Sans',system-ui,sans-serif}
+h1,h2,h3{font-family:'Oswald',Impact,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.05;margin:0}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.stripe{height:12px;background:repeating-linear-gradient(-45deg,var(--red) 0 14px,#fff 14px 28px,var(--blue) 28px 42px,#fff 42px 56px)}
+header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.logo{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.logo span{color:#ff6a6f}
+nav{display:flex;gap:26px;align-items:center}
+nav a{text-decoration:none;font-size:.95rem;color:#cfd3d9}
+nav a:hover{color:#fff}
+.btn{display:inline-block;background:var(--red);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:13px 26px;border:2px solid var(--red);border-radius:2px;text-decoration:none;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:#a91d23;border-color:#a91d23}
+.btn.dark{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.dark:hover{background:var(--ink);color:#fff}
+.hero{padding:clamp(48px,8vw,96px) 0}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.kicker{font-family:'Oswald',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--red);font-weight:600;font-size:.9rem}
+.hero h1{font-size:clamp(2.8rem,7vw,5.4rem);font-weight:700;margin:14px 0 20px}
+.hero p{color:var(--muted);max-width:46ch;font-size:1.12rem;margin:0 0 30px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.poleBox{display:flex;justify-content:center}
+.pole{position:relative;width:104px;height:360px;border-radius:52px;border:7px solid #fff;outline:3px solid var(--ink);overflow:hidden;box-shadow:0 18px 40px rgba(21,24,29,.25);background:#fff}
+.pole::before{content:"";position:absolute;left:0;right:0;top:0;height:calc(100% + 100px);background:repeating-linear-gradient(-45deg,var(--red) 0 17.68px,#fff 17.68px 35.36px,var(--blue) 35.36px 53.03px,#fff 53.03px 70.71px);animation:spin 3s linear infinite}
+.pole::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.28),rgba(255,255,255,.28) 35%,rgba(0,0,0,0) 60%,rgba(0,0,0,.3))}
+@keyframes spin{to{transform:translateY(-100px)}}
+section{padding:clamp(52px,8vw,92px) 0}
+h2{font-size:clamp(2.2rem,5vw,3.2rem);font-weight:700}
+.lead{color:var(--muted);max-width:54ch;margin:12px 0 38px}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px}
+.svc{display:flex;gap:18px;padding:22px 0;border-top:1px solid var(--line)}
+.svc b{font-family:'Oswald',sans-serif;font-size:1.9rem;color:var(--red);line-height:1;min-width:2.2ch}
+.svc h3{font-size:1.4rem;font-weight:600}
+.svc p{margin:4px 0 0;color:var(--muted);font-size:.98rem}
+.dark-band{background:var(--ink);color:#fff}
+.dark-band .lead{color:#b9bfc7}
+.shop{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.pillars{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.pillars li{border:1px solid #333a43;padding:18px 20px;border-radius:2px}
+.pillars h3{font-size:1.2rem;font-weight:600;color:#fff}
+.pillars p{margin:4px 0 0;color:#b9bfc7;font-size:.96rem}
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px}
+.info{margin:24px 0 0;border-top:1px solid var(--line)}
+.info div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.info dt{color:var(--muted)}
+.info dd{margin:0;font-weight:600;text-align:right}
+form{background:var(--card);border:1px solid var(--line);padding:26px;display:grid;gap:14px;border-radius:2px}
+label{display:grid;gap:6px;font-weight:600;font-size:.9rem}
+input,select,textarea{font:inherit;color:var(--ink);background:#fff;border:1px solid #bdb6a9;border-radius:2px;padding:12px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);outline-offset:1px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.note{color:var(--muted);font-size:.85rem;margin:0}
+#msg{display:none;padding:12px;border:1px solid var(--blue);background:#eef2fa;font-size:.95rem;margin:0}
+footer{background:var(--ink);color:#b9bfc7;padding:26px 0;font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+@media(max-width:860px){nav a:not(.btn){display:none}.hero .wrap,.shop,.contact{grid-template-columns:1fr}.poleBox{order:-1}.pole{height:220px;width:90px}.services{grid-template-columns:1fr}}
+@media(max-width:560px){.row{grid-template-columns:1fr}.cta .btn{width:100%;text-align:center}}
+@media(prefers-reduced-motion:reduce){.pole::before{animation:none}*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Barber<span>shop</span> Zagreb</a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#shop">The shop</a>
+      <a href="#book">Book</a>
+      <a class="btn" href="#book">Book a chair</a>
+    </nav>
+  </div>
+  <div class="stripe"></div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="kicker">Haircuts · Beards · Shaves</span>
+        <h1>Sharp cuts. Calm chair.</h1>
+        <p>Classic and modern haircuts, clean fades and proper beard work in a relaxed shop. Come in, sit down, leave looking sharp.</p>
+        <div class="cta">
+          <a class="btn" href="#book">Book a chair</a>
+          <a class="btn dark" href="#services">See services</a>
+        </div>
+      </div>
+      <div class="poleBox" aria-hidden="true"><div class="pole"></div></div>
+    </div>
+  </section>
+
+  <section id="services" style="padding-top:0">
+    <div class="wrap">
+      <h2>Services</h2>
+      <p class="lead">Ask the barber if you want something that is not on the list. Prices are given in the shop before you sit down.</p>
+      <div class="services">
+        <div class="svc"><b>01</b><div><h3>Classic haircut</h3><p>Scissor or clipper cut, finished with a wash and style.</p></div></div>
+        <div class="svc"><b>02</b><div><h3>Skin fade</h3><p>Clean, blended fades from skin to length, tailored to your head shape.</p></div></div>
+        <div class="svc"><b>03</b><div><h3>Beard trim</h3><p>Shaping, lining and trimming with a hot towel finish.</p></div></div>
+        <div class="svc"><b>04</b><div><h3>Hot towel shave</h3><p>Traditional straight razor shave with warm towels and aftershave.</p></div></div>
+        <div class="svc"><b>05</b><div><h3>Cut and beard</h3><p>Haircut and beard work in one visit.</p></div></div>
+        <div class="svc"><b>06</b><div><h3>Kids' cut</h3><p>Patient, quick haircuts for the youngest customers.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop" class="dark-band">
+    <div class="wrap shop">
+      <div>
+        <h2>The shop</h2>
+        <p class="lead" style="margin-bottom:0">A small barbershop built around good haircuts and a relaxed atmosphere. No rush, no guessing: you tell us what you want and we talk it through first.</p>
+      </div>
+      <ul class="pillars">
+        <li><h3>Talk first</h3><p>We agree on the cut before the clippers come out.</p></li>
+        <li><h3>Clean tools</h3><p>Blades and tools are cleaned between every customer.</p></li>
+        <li><h3>Book or walk in</h3><p>Reserve a time or drop by when a chair is free.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="book">
+    <div class="wrap contact">
+      <div>
+        <h2>Book a chair</h2>
+        <p class="lead" style="margin-bottom:0">Send a request and we will confirm a time, or call the shop.</p>
+        <dl class="info">
+          <div><dt>Phone</dt><dd><a href="tel:+38510000000">01 000 0000</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:hello@example.com">hello@example.com</a></dd></div>
+          <div><dt>Address</dt><dd>Example Street 1, Zagreb</dd></div>
+          <div><dt>Hours</dt><dd>Tue – Fri 9 am – 8 pm<br>Sat 9 am – 4 pm<br>Sun, Mon closed</dd></div>
+        </dl>
+      </div>
+      <form id="f" novalidate>
+        <div class="row">
+          <label for="name">Name<input id="name" name="name" autocomplete="name"></label>
+          <label for="phone">Phone<input id="phone" name="phone" type="tel" autocomplete="tel"></label>
+        </div>
+        <label for="service">Service
+          <select id="service" name="service">
+            <option>Classic haircut</option><option>Skin fade</option><option>Beard trim</option>
+            <option>Hot towel shave</option><option>Cut and beard</option><option>Kids' cut</option>
+          </select>
+        </label>
+        <div class="row">
+          <label for="date">Preferred day<input id="date" name="date" type="date"></label>
+          <label for="time">Preferred time<input id="time" name="time" type="time"></label>
+        </div>
+        <label for="notes">Notes<textarea id="notes" name="notes" rows="3"></textarea></label>
+        <button class="btn" type="submit">Request a time</button>
+        <p id="msg" role="status"></p>
+        <p class="note">This is a sample page. The form is not connected to a real shop.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="stripe" style="margin-bottom:22px"></div>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> Barbershop Zagreb</span>
+    <span>Haircuts · Beards · Shaves</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+const f=document.getElementById('f'),m=document.getElementById('msg');
+f.addEventListener('submit',e=>{
+  e.preventDefault();
+  m.style.display='block';
+  if(!f.name.value.trim()||f.phone.value.trim().length<6){m.textContent='Please enter your name and phone number.';return}
+  m.textContent='This is a sample page, so your request was not sent. For a real shop the form is connected to email.';
+});
+</script>
+</body>
+</html>
